@@ -19,7 +19,7 @@ export const experience: ExperienceItem[] = [
   {
     role: "Freelance Software Tester",
     company: "InRiver — Malmö, Sweden (Remote)",
-    period: "Apr 2022 — Present",
+    period: "Apr 2022 — Jun 2025",
     points: [
       "Conducted data validation and staging environment testing.",
       "Logged detailed bug reports and ensured production data integrity.",
