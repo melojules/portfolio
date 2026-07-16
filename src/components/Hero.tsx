@@ -29,7 +29,7 @@ export default function Hero() {
       </div>
 
       <Image
-        src="/profile.png"
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/profile.png`}
         alt="Carmelo Jules Marilag"
         width={384}
         height={384}
