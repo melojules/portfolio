@@ -4,7 +4,7 @@ import { skillCategories, certifications, education } from "@/data/skills";
 export default function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-4xl px-6 py-20">
-      <SectionHeading index="02." title="Skills & Certifications" />
+      <SectionHeading index="03." title="Skills & Certifications" />
 
       <div className="grid gap-6 sm:grid-cols-2">
         {skillCategories.map((category) => (

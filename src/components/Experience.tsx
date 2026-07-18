@@ -5,7 +5,7 @@ export default function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-4xl px-6 py-20">
       <div className="mb-10 flex items-center justify-between">
-        <SectionHeading index="01." title="Experience" />
+        <SectionHeading index="02." title="Experience" />
         <a
           href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/resume.pdf`}
           target="_blank"

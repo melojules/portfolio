@@ -16,7 +16,7 @@ const contactLinks = [
 export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-4xl px-6 py-20">
-      <SectionHeading index="03." title="Contact" />
+      <SectionHeading index="04." title="Contact" />
       <p className="mb-8 max-w-xl text-muted">
         Have a question or want to work together? Reach out directly.
       </p>
