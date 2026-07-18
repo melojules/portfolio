@@ -15,4 +15,10 @@ export const projects: Project[] = [
     stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Zustand"],
     repoUrl: "https://github.com/melojules/quest-lms",
   },
+  {
+    title: "Ticketing System",
+    description: "A help-desk ticketing system built with Laravel.",
+    stack: ["Laravel", "PHP", "Blade", "Sanctum"],
+    repoUrl: "https://github.com/melojules/Ticketing-System",
+  },
 ];
