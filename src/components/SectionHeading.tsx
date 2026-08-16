@@ -6,7 +6,7 @@ export default function SectionHeading({
   title: string;
 }) {
   return (
-    <div className="mb-10 flex items-baseline gap-3 border-b border-surface-border pb-3">
+    <div className="mb-8 flex items-baseline gap-3 border-b border-surface-border pb-3">
       <span className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
         {eyebrow}
       </span>

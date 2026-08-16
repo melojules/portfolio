@@ -3,30 +3,37 @@ import { skillCategories, certifications, education } from "@/data/skills";
 
 export default function Skills() {
   return (
-    <section id="skills" className="mx-auto max-w-4xl px-6 py-20">
+    <section id="skills" className="mx-auto max-w-4xl px-6 py-14">
       <SectionHeading eyebrow="Toolchain" title="Skills & Certifications" />
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      {/* One row per category: a two-column grid would tie every row's height
+          to the tallest category and leave dead space under the short ones. */}
+      <dl className="divide-y divide-surface-border border-y border-surface-border">
         {skillCategories.map((category) => (
-          <div key={category.label}>
-            <h3 className="mb-3 font-mono text-xs uppercase tracking-wide text-accent">
+          <div
+            key={category.label}
+            className="grid gap-2 py-3 sm:grid-cols-[7rem_1fr] sm:gap-6"
+          >
+            <dt className="font-mono text-xs uppercase tracking-wide text-accent sm:pt-1.5">
               {category.label}
-            </h3>
-            <ul className="flex flex-wrap gap-2">
-              {category.items.map((item) => (
-                <li
-                  key={item}
-                  className="border border-surface-border px-3 py-1 font-mono text-xs text-muted"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
+            </dt>
+            <dd>
+              <ul className="flex flex-wrap gap-2">
+                {category.items.map((item) => (
+                  <li
+                    key={item}
+                    className="border border-surface-border px-3 py-1 font-mono text-xs text-muted"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </dd>
           </div>
         ))}
-      </div>
+      </dl>
 
-      <div className="mt-14 grid gap-10 sm:grid-cols-2">
+      <div className="mt-10 grid gap-8 sm:grid-cols-2">
         <div>
           <h3 className="mb-4 font-display text-lg font-semibold text-foreground">
             Certifications

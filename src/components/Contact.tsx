@@ -15,7 +15,7 @@ const contactLinks = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="mx-auto max-w-4xl px-6 py-20">
+    <section id="contact" className="mx-auto max-w-4xl px-6 py-14">
       <SectionHeading eyebrow="Escalate" title="Contact" />
       <p className="mb-8 max-w-xl text-muted">
         Found something worth discussing? Reach out directly — no ticketing
