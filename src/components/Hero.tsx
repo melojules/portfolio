@@ -48,12 +48,12 @@ export default function Hero() {
       <div className="relative mx-auto shrink-0 sm:mx-0">
         <div className="relative size-56 border border-surface-border bg-surface p-2 sm:size-64">
           <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/profile.png`}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/profile.jpg`}
             alt="Carmelo Jules Marilag"
             width={320}
             height={320}
             priority
-            className="size-full object-cover grayscale-[15%]"
+            className="size-full object-cover object-top grayscale-[15%]"
           />
           <svg
             viewBox="0 0 100 100"
