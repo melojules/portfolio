@@ -4,19 +4,19 @@ import { skillCategories, certifications, education } from "@/data/skills";
 export default function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-4xl px-6 py-20">
-      <SectionHeading index="03." title="Skills & Certifications" />
+      <SectionHeading eyebrow="Toolchain" title="Skills & Certifications" />
 
       <div className="grid gap-6 sm:grid-cols-2">
         {skillCategories.map((category) => (
           <div key={category.label}>
-            <h3 className="mb-3 font-mono text-sm text-accent">
+            <h3 className="mb-3 font-mono text-xs uppercase tracking-wide text-accent">
               {category.label}
             </h3>
             <ul className="flex flex-wrap gap-2">
               {category.items.map((item) => (
                 <li
                   key={item}
-                  className="rounded border border-surface-border px-3 py-1 font-mono text-xs text-muted"
+                  className="border border-surface-border px-3 py-1 font-mono text-xs text-muted"
                 >
                   {item}
                 </li>
@@ -28,7 +28,7 @@ export default function Skills() {
 
       <div className="mt-14 grid gap-10 sm:grid-cols-2">
         <div>
-          <h3 className="mb-4 text-lg font-semibold text-foreground">
+          <h3 className="mb-4 font-display text-lg font-semibold text-foreground">
             Certifications
           </h3>
           <ul className="flex flex-col gap-2 text-sm text-muted">
@@ -52,7 +52,7 @@ export default function Skills() {
           </ul>
         </div>
         <div>
-          <h3 className="mb-4 text-lg font-semibold text-foreground">
+          <h3 className="mb-4 font-display text-lg font-semibold text-foreground">
             Education
           </h3>
           <ul className="flex flex-col gap-2 text-sm text-muted">

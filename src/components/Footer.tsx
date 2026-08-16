@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-6 py-10 text-sm text-muted sm:flex-row sm:justify-between">
         <div className="text-center font-mono sm:text-left">
           <p>© {new Date().getFullYear()} Carmelo Jules Marilag</p>
-          <p className="text-xs">Davao City, Philippines</p>
+          <p className="text-xs">Report filed from Davao City, Philippines</p>
         </div>
         <ul className="flex flex-wrap justify-center gap-5 font-mono">
           {socials.map((social) => {
