@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     "Portfolio of Carmelo Jules Marilag, a Software QA Engineer specializing in manual and automated testing with Playwright, Selenium, and Postman.",
 };
 
+// Runs before first paint so a stored preference never flashes the other
+// theme. Untouched when nothing is stored, letting prefers-color-scheme win.
+const themeScript = `try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,8 +37,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

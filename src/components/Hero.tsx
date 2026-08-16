@@ -53,7 +53,7 @@ export default function Hero() {
             width={320}
             height={320}
             priority
-            className="size-full object-cover object-top grayscale-[15%]"
+            className="size-full object-cover object-top grayscale-(--photo-grade)"
           />
           <svg
             viewBox="0 0 100 100"
@@ -69,7 +69,7 @@ export default function Hero() {
             />
           </svg>
         </div>
-        <span className="stamp absolute -bottom-5 -left-5 flex size-20 -rotate-12 flex-col items-center justify-center gap-0.5 rounded-full border-2 border-pass text-center font-mono text-[0.55rem] font-semibold uppercase leading-tight tracking-wider text-pass">
+        <span className="stamp absolute -bottom-6 -left-6 flex size-20 -rotate-12 flex-col items-center justify-center gap-0.5 rounded-full border-2 border-pass bg-background text-center font-mono text-[0.55rem] font-semibold uppercase leading-tight tracking-wider text-pass">
           <span>Verified</span>
           <span>Tester</span>
         </span>

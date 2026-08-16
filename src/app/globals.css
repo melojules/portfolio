@@ -1,15 +1,46 @@
 @import "tailwindcss";
 
+/* Daylight: the report on paper. */
 :root {
   --background: #f0f1ec;
   --surface: #f7f7f3;
   --surface-border: #d8dad2;
   --foreground: #171b22;
   --muted: #565f6b;
-  --accent: #d9720c;
-  --accent-soft: #d9720c1a;
+  --accent: #a84f06;
+  --accent-soft: #a84f061a;
   --pass: #2f7a4f;
   --pass-soft: #2f7a4f1a;
+  --photo-grade: 15%;
+}
+
+/* Lamplight: the same report read after hours. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --background: #14171c;
+    --surface: #1b1f26;
+    --surface-border: #2c323b;
+    --foreground: #e8e6e0;
+    --muted: #9aa3af;
+    --accent: #f0902e;
+    --accent-soft: #f0902e26;
+    --pass: #5fbb87;
+    --pass-soft: #5fbb8726;
+    --photo-grade: 25%;
+  }
+}
+
+:root[data-theme="dark"] {
+  --background: #14171c;
+  --surface: #1b1f26;
+  --surface-border: #2c323b;
+  --foreground: #e8e6e0;
+  --muted: #9aa3af;
+  --accent: #f0902e;
+  --accent-soft: #f0902e26;
+  --pass: #5fbb87;
+  --pass-soft: #5fbb8726;
+  --photo-grade: 25%;
 }
 
 @theme inline {
@@ -25,6 +56,20 @@
   --font-sans: var(--font-body);
   --font-display: var(--font-display);
   --font-mono: var(--font-mono);
+}
+
+html {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    color-scheme: dark;
+  }
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 body {
