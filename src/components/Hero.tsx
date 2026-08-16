@@ -8,7 +8,7 @@ const fields = [
 
 export default function Hero() {
   return (
-    <section className="mx-auto grid max-w-4xl gap-12 px-6 pb-24 pt-20 sm:grid-cols-[1fr_auto] sm:items-start">
+    <section className="mx-auto grid max-w-4xl gap-12 px-6 pb-16 pt-16 sm:grid-cols-[1fr_auto] sm:items-start">
       <div className="flex flex-col gap-6">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
           Field Report · QA Engineer

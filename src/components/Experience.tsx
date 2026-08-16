@@ -3,15 +3,13 @@ import { experience } from "@/data/experience";
 
 export default function Experience() {
   return (
-    <section id="experience" className="mx-auto max-w-4xl px-6 py-20">
-      <div className="mb-10 flex items-center justify-between gap-4">
-        <SectionHeading eyebrow="Record" title="Experience" />
-      </div>
+    <section id="experience" className="mx-auto max-w-4xl px-6 py-14">
+      <SectionHeading eyebrow="Record" title="Experience" />
       <a
         href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/resume.pdf`}
         target="_blank"
         rel="noreferrer"
-        className="-mt-4 mb-10 inline-block border border-surface-border px-4 py-2 font-mono text-sm text-foreground transition-colors hover:border-accent hover:text-accent"
+        className="mb-6 inline-block border border-surface-border px-4 py-2 font-mono text-sm text-foreground transition-colors hover:border-accent hover:text-accent"
       >
         Full report (résumé) ↓
       </a>
