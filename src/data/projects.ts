@@ -21,4 +21,25 @@ export const projects: Project[] = [
     stack: ["Laravel", "PHP", "Blade", "Sanctum"],
     repoUrl: "https://github.com/melojules/Ticketing-System",
   },
+  {
+    title: "Nanay's Kusina",
+    description:
+      "An interactive ulam combo builder for a Filipino home-cooking service, with live pricing and a lightweight checkout.",
+    stack: ["HTML", "CSS", "JavaScript", "Claude Design"],
+    repoUrl: "https://github.com/melojules/nanays-kusina",
+  },
+  {
+    title: "Harvest Lane",
+    description:
+      "A front-end prototype for a farm-to-doorstep produce marketplace, with farm browsing, filtering, a basket, and checkout.",
+    stack: ["HTML", "CSS", "JavaScript", "Claude Design"],
+    repoUrl: "https://github.com/melojules/harvest-lane",
+  },
+  {
+    title: "PC Health Console",
+    description:
+      "A Windows desktop app that reads live driver, performance, and disk data to flag issues and reclaim space.",
+    stack: ["Electron", "React", "Vite", "Node.js"],
+    repoUrl: "https://github.com/melojules/pc-health-console",
+  },
 ];
