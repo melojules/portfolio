@@ -21,4 +21,11 @@ export const projects: Project[] = [
     stack: ["Laravel", "PHP", "Blade", "Sanctum"],
     repoUrl: "https://github.com/melojules/Ticketing-System",
   },
+  {
+    title: "Nanay's Kusina",
+    description:
+      "A landing page for a Filipino home-cooking delivery service, built around a three-step ulam combo builder.",
+    stack: ["HTML", "CSS", "Claude Design"],
+    repoUrl: "https://github.com/melojules/nanays-kusina",
+  },
 ];
