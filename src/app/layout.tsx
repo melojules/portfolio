@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, IBM_Plex_Serif, IBM_Plex_Mono } from "next/font/google";
+import { Space_Grotesk, DM_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -7,7 +7,7 @@ const display = Space_Grotesk({
   subsets: ["latin"],
 });
 
-const body = IBM_Plex_Serif({
+const body = DM_Sans({
   variable: "--font-body",
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
 };
 
 // Runs before first paint so a stored preference never flashes the other
-// theme. Untouched when nothing is stored, letting prefers-color-scheme win.
-const themeScript = `try{var t=localStorage.getItem("theme");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}`;
+// theme. New visitors see the light palette from the design reference.
+const themeScript = `try{var t=localStorage.getItem("theme");if(!t)document.documentElement.dataset.theme="light";if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}catch(e){}`;
 
 export default function RootLayout({
   children,

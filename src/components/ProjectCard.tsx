@@ -1,42 +1,76 @@
 import type { Project } from "@/data/projects";
-
+import Arrow from "./Arrow";
+const covers: Record<
+  string,
+  { className: string; label: string; word: string; sub: string }
+> = {
+  "Quest LMS": {
+    className: "quest",
+    label: "LEARN. PLAY. LEVEL UP.",
+    word: "quest",
+    sub: "Learning, reimagined.",
+  },
+  "Ticketing System": {
+    className: "ticket",
+    label: "SUPPORT, SORTED.",
+    word: "ticket /",
+    sub: "A little more order.",
+  },
+  "Nanay's Kusina": {
+    className: "kusina",
+    label: "FROM OUR KITCHEN",
+    word: "Nanay’s",
+    sub: "KUSINA · MADE WITH LOVE",
+  },
+  "Harvest Lane": {
+    className: "harvest",
+    label: "FARM TO DOORSTEP",
+    word: "harvest",
+    sub: "Good things grow here.",
+  },
+  "PC Health Console": {
+    className: "health",
+    label: "YOUR SYSTEM, IN VIEW.",
+    word: "pc / health",
+    sub: "Driver · Performance · Disk",
+  },
+};
 export default function ProjectCard({ project }: { project: Project }) {
+  const cover = covers[project.title];
   return (
-    <article className="relative flex flex-col gap-4 border border-surface-border bg-surface p-6 transition-colors hover:border-accent">
-      {project.repoUrl && (
-        <a
-          href={project.repoUrl}
-          target="_blank"
-          rel="noreferrer"
-          aria-label={`View ${project.title} on GitHub`}
-          className="absolute inset-0 z-0"
-        />
-      )}
-      <div className="pointer-events-none relative z-10 flex items-start justify-between gap-4">
-        <h3 className="font-display text-lg font-semibold text-foreground">
-          {project.title}
-        </h3>
-        {project.liveUrl && (
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="pointer-events-auto shrink-0 font-mono text-xs uppercase tracking-wide text-muted transition-colors hover:text-accent"
-          >
-            Live ↗
-          </a>
-        )}
-      </div>
-      <p className="pointer-events-none relative z-10 text-sm text-muted">
-        {project.description}
-      </p>
-      <ul className="pointer-events-none relative z-10 flex flex-wrap gap-2 font-mono text-xs text-accent">
-        {project.stack.map((tech) => (
-          <li key={tech} className="border border-surface-border px-2 py-1">
-            {tech}
-          </li>
-        ))}
-      </ul>
+    <article className="project-card">
+      <a
+        href={project.repoUrl}
+        target="_blank"
+        rel="noreferrer"
+        className="project-link"
+        aria-label={`View ${project.title} on GitHub`}
+      >
+        <div className={`project-cover ${cover.className}`} aria-hidden="true">
+          <span className="cover-caption">{cover.label}</span>
+          <strong>
+            {cover.word}
+            <i>.</i>
+          </strong>
+          <span className="cover-sub">{cover.sub}</span>
+          <div className="cover-decoration" />
+        </div>
+        <div className="project-info">
+          <p className="project-category">
+            {project.stack.slice(0, 2).join(" / ")}
+          </p>
+          <div className="project-title">
+            <h3>{project.title}</h3>
+            <Arrow diagonal />
+          </div>
+          <p>{project.description}</p>
+          <ul className="project-stack">
+            {project.stack.map((t) => (
+              <li key={t}>{t}</li>
+            ))}
+          </ul>
+        </div>
+      </a>
     </article>
   );
 }

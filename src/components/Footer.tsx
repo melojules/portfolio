@@ -1,36 +1,53 @@
-const socials = [
-  { label: "GitHub", href: "https://github.com/melojules" },
-  { label: "LinkedIn", href: "https://ph.linkedin.com/in/cjmarilag" },
-  { label: "Email", href: "mailto:carmelomarilag39@gmail.com" },
-  { label: "Phone", href: "tel:+639065173878" },
-];
-
 export default function Footer() {
   return (
-    <footer className="border-t border-surface-border">
-      <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-6 py-10 text-sm text-muted sm:flex-row sm:justify-between">
-        <div className="text-center font-mono sm:text-left">
-          <p>© {new Date().getFullYear()} Carmelo Jules Marilag</p>
-          <p className="text-xs">Report filed from Davao City, Philippines</p>
+    <footer className="footer">
+      <div className="wrap">
+        <div className="footer-grid">
+          <div>
+            <a href="#home" className="footer-brand">
+              cjmarilag<span>.</span>
+            </a>
+            <p>
+              Careful testing.
+              <br />
+              Confident releases.
+            </p>
+          </div>
+          <div>
+            <h3>Explore</h3>
+            <a href="#projects">Projects</a>
+            <a href="#speaking">Speaking</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills & certifications</a>
+          </div>
+          <div>
+            <h3>Find me online</h3>
+            <a
+              href="https://github.com/melojules"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub ↗
+            </a>
+            <a
+              href="https://ph.linkedin.com/in/cjmarilag"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn ↗
+            </a>
+          </div>
+          <div>
+            <h3>Say hello</h3>
+            <a href="mailto:carmelomarilag39@gmail.com">Email me ↗</a>
+            <a href="tel:+639065173878">+63 906 517 3878</a>
+            <p>Davao City, Philippines</p>
+          </div>
         </div>
-        <ul className="flex flex-wrap justify-center gap-5 font-mono">
-          {socials.map((social) => {
-            const isExternal = social.href.startsWith("http");
-            return (
-              <li key={social.label}>
-                <a
-                  href={social.href}
-                  {...(isExternal
-                    ? { target: "_blank", rel: "noreferrer" }
-                    : {})}
-                  className="transition-colors hover:text-accent"
-                >
-                  {social.label}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        <div className="footer-bottom">
+          <p>© {new Date().getFullYear()} Carmelo Jules Marilag</p>
+          <p>Built with care. Tested with purpose.</p>
+        </div>
       </div>
     </footer>
   );

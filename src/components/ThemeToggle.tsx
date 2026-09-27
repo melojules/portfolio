@@ -23,7 +23,7 @@ function subscribe(onChange: () => void) {
 function getSnapshot(): Theme {
   const chosen = document.documentElement.dataset.theme;
   if (chosen === "dark" || chosen === "light") return chosen;
-  return window.matchMedia(DARK_QUERY).matches ? "dark" : "light";
+  return "light";
 }
 
 // The server can't know the visitor's theme; null renders a neutral button
@@ -51,7 +51,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label={theme ? `Switch to ${next} mode` : "Switch colour mode"}
-      className="flex items-center gap-1.5 border border-surface-border px-2.5 py-1 font-mono text-xs uppercase tracking-wide text-muted transition-colors hover:border-accent hover:text-accent"
+      className="theme-toggle"
     >
       {/* Fixed widths keep the nav from shifting once the theme resolves. */}
       <span aria-hidden="true" className="w-3 text-center">
