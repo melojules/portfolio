@@ -5,9 +5,9 @@ import ThemeToggle from "./ThemeToggle";
 import Arrow from "./Arrow";
 const links = [
   { id: "home", label: "Home" },
-  { id: "expertise", label: "Expertise" },
-  { id: "projects", label: "Work" },
+  { id: "projects", label: "Projects" },
   { id: "speaking", label: "Speaking" },
+  { id: "experience", label: "Work Experience" },
   { id: "certifications", label: "Certifications" },
 ];
 
@@ -25,7 +25,7 @@ export default function Nav() {
       for (const section of sections) {
         if (section.getBoundingClientRect().top <= offset + 8) current = section.id;
       }
-      setActive(current);
+      setActive(current === "expertise" ? "home" : current);
     };
     const schedule = () => {
       if (!frame) frame = requestAnimationFrame(update);

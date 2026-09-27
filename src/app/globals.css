@@ -1235,3 +1235,11 @@ h2 > span,
 @media (min-width: 761px) and (max-width: 1050px) {
   .nav-links a { padding-inline: 9px; font-size: 12px; }
 }
+@media (max-width: 760px) {
+  .nav-links { gap: 0; }
+  .nav-links li { min-width: 0; }
+  .nav-links a { padding-inline: 4px; font-size: 10px; text-align: center; line-height: 1.2; }
+}
+@media (min-width: 761px) and (max-width: 1050px) {
+  .nav-links a { padding-inline: 7px; font-size: 11px; }
+}
