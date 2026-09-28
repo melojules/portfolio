@@ -1243,3 +1243,6 @@ h2 > span,
 @media (min-width: 761px) and (max-width: 1050px) {
   .nav-links a { padding-inline: 7px; font-size: 11px; }
 }
+.speaking-ai { margin-top: 32px; }
+.speaking-ai .speaking-photo img { aspect-ratio: 4 / 3; object-fit: cover; object-position: center 78%; }
+.speaking-gallery .ai-certificate { max-width: 800px; margin: 0 auto; padding-bottom: 22px; }
